@@ -17,10 +17,11 @@ package cmd
 
 import (
 	"fmt"
-
-	"github.com/spf13/cobra"
-	appenginev1 "github.com/bluebosh/knap/pkg/apis/knap/v1alpha1"
+	knapclientset "github.com/bluebosh/knap/pkg/client/clientset/versioned"
+	"github.com/golang/glog"
 	"k8s.io/client-go/tools/clientcmd"
+	"github.com/spf13/cobra"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 )
 
@@ -36,8 +37,18 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("list called")
-		config := clientcmd.GetConfigFromFileOrDie("test.yml")
-		config.get
+		cfg, err := clientcmd.BuildConfigFromFlags("", "")
+		if err != nil {
+			glog.Fatalf("Error building kubeconfig: %v", err)
+		}
+
+		knapClient, err := knapclientset.NewForConfig(cfg)
+		if err != nil {
+			glog.Fatalf("Error building knap clientset: %v", err)
+		}
+
+
+		fmt.Println(knapClient.KnapV1alpha1().Appengines("default").List(metav1.ListOptions{}))
 	},
 }
 

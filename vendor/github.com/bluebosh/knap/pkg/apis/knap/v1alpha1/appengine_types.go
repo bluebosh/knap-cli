@@ -39,8 +39,11 @@ type AppengineStatus struct {
 	// The pipeline of the application
 	// PipelineRun *pipelinev1alpha1.PipelineRun `json:"pipelineRun"`
 	Domain string `json:"domain"`
+
+	Instance int32 `json:"instance"`
 }
 
+// +genclient
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // Appengine is the Schema for the appengines API
