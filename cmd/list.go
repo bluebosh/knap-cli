@@ -22,6 +22,8 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 	"github.com/spf13/cobra"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	_ "k8s.io/client-go/plugin/pkg/client/auth/oidc" // from https://github.com/kubernetes/client-go/issues/345
+    "github.com/fatih/color"
 
 )
 
@@ -36,8 +38,7 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("list called")
-		cfg, err := clientcmd.BuildConfigFromFlags("", "")
+		cfg, err := clientcmd.BuildConfigFromFlags("", "/Users/jordan/.bluemix/plugins/container-service/clusters/knative_pipeline/kube-config-dal10-knative_pipeline.yml")
 		if err != nil {
 			glog.Fatalf("Error building kubeconfig: %v", err)
 		}
@@ -47,8 +48,13 @@ to quickly create a Cobra application.`,
 			glog.Fatalf("Error building knap clientset: %v", err)
 		}
 
-
-		fmt.Println(knapClient.KnapV1alpha1().Appengines("default").List(metav1.ListOptions{}))
+		appLst, err := knapClient.KnapV1alpha1().Appengines("default").List(metav1.ListOptions{})
+		color.Cyan("%-30s%-20s%-20s%-20s\n", "Application Name", "Status", "Instance", "Domain")
+		for i := 0; i < len(appLst.Items); i++ {
+			app := appLst.Items[i]
+			fmt.Printf("%-30s%-20s%-20s%-20s\n", app.Spec.AppName + "-appengine", app.Status.Status, "1/1", app.Status.Domain + "\n")
+		}
+		fmt.Println("There are", color.CyanString("%v",len(appLst.Items)), "application engine(s)")
 	},
 }
 

@@ -17,8 +17,13 @@ package cmd
 
 import (
 	"fmt"
-
+	knapclientset "github.com/bluebosh/knap/pkg/client/clientset/versioned"
+	"github.com/golang/glog"
+	"k8s.io/client-go/tools/clientcmd"
 	"github.com/spf13/cobra"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	_ "k8s.io/client-go/plugin/pkg/client/auth/oidc" // from https://github.com/kubernetes/client-go/issues/345
+	"github.com/fatih/color"
 )
 
 // deleteCmd represents the delete command
@@ -32,7 +37,23 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("delete called")
+		cfg, err := clientcmd.BuildConfigFromFlags("", "/Users/jordan/.bluemix/plugins/container-service/clusters/knative_pipeline/kube-config-dal10-knative_pipeline.yml")
+		if err != nil {
+			glog.Fatalf("Error building kubeconfig: %v", err)
+		}
+
+		knapClient, err := knapclientset.NewForConfig(cfg)
+		if err != nil {
+			glog.Fatalf("Error building knap clientset: %v", err)
+		}
+
+		err = knapClient.KnapV1alpha1().Appengines("default").Delete(args[0], metav1.NewDeleteOptions(0))
+		if err != nil {
+			//glog.Fatalf("Error delete application engine: %s", args[0])
+			fmt.Println("Error deleting application engine", color.CyanString(args[0]))
+		} else {
+			fmt.Println("Application engine", color.CyanString(args[0]), "is deleted successfully")
+		}
 	},
 }
 

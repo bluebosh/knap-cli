@@ -17,8 +17,13 @@ package cmd
 
 import (
 	"fmt"
-
+	tektoncdentset "github.com/tektoncd/pipeline/pkg/client/clientset/versioned"
+	"github.com/golang/glog"
+	"k8s.io/client-go/tools/clientcmd"
 	"github.com/spf13/cobra"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	_ "k8s.io/client-go/plugin/pkg/client/auth/oidc" // from https://github.com/kubernetes/client-go/issues/345
+	"github.com/fatih/color"
 )
 
 // templatesCmd represents the templates command
@@ -32,7 +37,31 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("templates called")
+		cfg, err := clientcmd.BuildConfigFromFlags("", "/Users/jordan/.bluemix/plugins/container-service/clusters/knative_pipeline/kube-config-dal10-knative_pipeline.yml")
+		if err != nil {
+			glog.Fatalf("Error building kubeconfig: %v", err)
+		}
+
+		tektoncdClient, err := tektoncdentset.NewForConfig(cfg)
+		if err != nil {
+			glog.Fatalf("Error building knap clientset: %v", err)
+		}
+
+		pipelines, err := tektoncdClient.TektonV1alpha1().Pipelines("default").List(metav1.ListOptions{})
+		color.Cyan("%-40s%-80s\n", "Template Name", "Template Flow")
+		for i := 0; i < len(pipelines.Items); i++ {
+			pipeline := pipelines.Items[i]
+			taskFlow := ""
+			for i := 0; i < len(pipeline.Spec.Tasks); i++ {
+				task := pipeline.Spec.Tasks[i]
+				if taskFlow == "" {
+					taskFlow = task.Name
+				} else {
+					taskFlow = taskFlow + " -> " + task.Name
+				}
+			}
+			fmt.Printf("%-40s%-80s\n", pipeline.Name, taskFlow)
+		}
 	},
 }
 
