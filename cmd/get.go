@@ -28,16 +28,12 @@ import (
 
 // getCmd represents the get command
 var getCmd = &cobra.Command{
-	Use:   "get",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Use:   "get [appengine name]",
+	Short: "Get a knap appengine detail",
+	Long: `Get a knap appengine detail`,
+	Args: cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		cfg, err := clientcmd.BuildConfigFromFlags("", "/Users/jordan/.bluemix/plugins/container-service/clusters/knative_pipeline/kube-config-dal10-knative_pipeline.yml")
+		cfg, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
 		if err != nil {
 			glog.Fatalf("Error building kubeconfig: %v", err)
 		}

@@ -31,14 +31,9 @@ import (
 var listCmd = &cobra.Command{
 	Use:   "list",
 	Short: "List all knap appengines",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Long: `List all knap appengines`,
 	Run: func(cmd *cobra.Command, args []string) {
-		cfg, err := clientcmd.BuildConfigFromFlags("", "/Users/jordan/.bluemix/plugins/container-service/clusters/knative_pipeline/kube-config-dal10-knative_pipeline.yml")
+		cfg, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
 		if err != nil {
 			glog.Fatalf("Error building kubeconfig: %v", err)
 		}
@@ -52,9 +47,9 @@ to quickly create a Cobra application.`,
 		color.Cyan("%-30s%-20s%-20s%-20s\n", "Application Name", "Status", "Instance", "Domain")
 		for i := 0; i < len(appLst.Items); i++ {
 			app := appLst.Items[i]
-			fmt.Printf("%-30s%-20s%-20s%-20s\n", app.Spec.AppName + "-appengine", app.Status.Status, "1/1", app.Status.Domain + "\n")
+			fmt.Printf("%-30s%-20s%-20s%-20s\n", app.Name, app.Status.Status, "1/1", app.Status.Domain)
 		}
-		fmt.Println("There are", color.CyanString("%v",len(appLst.Items)), "application engine(s)")
+		fmt.Println("\nThere are", color.CyanString("%v",len(appLst.Items)), "application engine(s)\n")
 	},
 }
 

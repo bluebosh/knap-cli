@@ -28,16 +28,12 @@ import (
 
 // deleteCmd represents the delete command
 var deleteCmd = &cobra.Command{
-	Use:   "delete",
+	Use:   "delete [appengine name]",
 	Short: "Delete a knap appengine",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Long: `Delete a knap appengine`,
+	Args: cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		cfg, err := clientcmd.BuildConfigFromFlags("", "/Users/jordan/.bluemix/plugins/container-service/clusters/knative_pipeline/kube-config-dal10-knative_pipeline.yml")
+		cfg, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
 		if err != nil {
 			glog.Fatalf("Error building kubeconfig: %v", err)
 		}
@@ -49,7 +45,7 @@ to quickly create a Cobra application.`,
 
 		err = knapClient.KnapV1alpha1().Appengines("default").Delete(args[0], metav1.NewDeleteOptions(0))
 		if err != nil {
-			//glog.Fatalf("Error delete application engine: %s", args[0])
+			//glog.Fatalf("Error deleting application engine: %s", args[0])
 			fmt.Println("Error deleting application engine", color.CyanString(args[0]))
 		} else {
 			fmt.Println("Application engine", color.CyanString(args[0]), "is deleted successfully")
