@@ -17,7 +17,7 @@ package cmd
 
 import (
 	"fmt"
-	tektoncdclientset "github.com/tektoncd/pipeline/pkg/client/clientset/versioned"
+	knapclientset "github.com/bluebosh/knap/pkg/client/clientset/versioned"
 	"github.com/golang/glog"
 	"k8s.io/client-go/tools/clientcmd"
 	"github.com/spf13/cobra"
@@ -26,51 +26,45 @@ import (
 	"github.com/fatih/color"
 )
 
-// templatesCmd represents the templates command
-var templatesCmd = &cobra.Command{
-	Use:   "templates",
-	Short: "List all knap templates",
-	Long: `List all knap templates`,
+// logsCmd represents the logs command
+var logsCmd = &cobra.Command{
+	Use:   "logs",
+	Short: "Get a knap appengine logs",
+	Long: `Get a knap appengine logs`,
+	Args: cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		cfg, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
 		if err != nil {
 			glog.Fatalf("Error building kubeconfig: %v", err)
 		}
 
-		tektoncdClient, err := tektoncdclientset.NewForConfig(cfg)
+		knapClient, err := knapclientset.NewForConfig(cfg)
 		if err != nil {
 			glog.Fatalf("Error building knap clientset: %v", err)
 		}
 
-		pipelines, err := tektoncdClient.TektonV1alpha1().Pipelines("default").List(metav1.ListOptions{})
-		color.Cyan("%-40s%-80s\n", "Template Name", "Template Flow")
-		for i := 0; i < len(pipelines.Items); i++ {
-			pipeline := pipelines.Items[i]
-			taskFlow := ""
-			for i := 0; i < len(pipeline.Spec.Tasks); i++ {
-				task := pipeline.Spec.Tasks[i]
-				if taskFlow == "" {
-					taskFlow = task.Name
-				} else {
-					taskFlow = taskFlow + " -> " + task.Name
-				}
-			}
-			fmt.Printf("%-40s%-80s\n", pipeline.Name, taskFlow)
+		app, err := knapClient.KnapV1alpha1().Appengines("default").Get(args[0], metav1.GetOptions{})
+
+		if err != nil {
+			fmt.Println("Error getting application engine", color.CyanString(args[0]), err)
+		} else {
+			fmt.Println("Retrieving application", color.CyanString(app.Spec.AppName), "logs...")
+			fmt.Println(app.Spec)
+			fmt.Println(app.Status)
 		}
-		fmt.Println("\nThere are", color.CyanString("%v",len(pipelines.Items)), "template(s)\n")
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(templatesCmd)
+	rootCmd.AddCommand(logsCmd)
 
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	// templatesCmd.PersistentFlags().String("foo", "", "A help for foo")
+	// logsCmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// templatesCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// logsCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
