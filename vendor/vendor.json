@@ -1,0 +1,709 @@
+{
+	"comment": "",
+	"ignore": "appengine/ appengine_internal/",
+	"package": [
+		{
+			"checksumSHA1": "zG5xXp+2L5t2f+JjzspG2d3Sbss=",
+			"path": "github.com/bluebosh/knap/pkg/apis/knap/v1alpha1",
+			"revision": "55609bb4b030c427fc6e39c1d3580fde84b68b29",
+			"revisionTime": "2019-06-17T09:37:33Z"
+		},
+		{
+			"checksumSHA1": "7QWn2gbBDds4wUOR+A7KnfVozLY=",
+			"origin": "github.com/knative/eventing-contrib/vendor/github.com/ghodss/yaml",
+			"path": "github.com/ghodss/yaml",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		},
+		{
+			"checksumSHA1": "O8R7tM0NEeUkh41G+/0d1h81e+g=",
+			"origin": "github.com/knative/eventing-contrib/vendor/github.com/google/go-cmp/cmp/cmpopts",
+			"path": "github.com/google/go-cmp/cmp/cmpopts",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		},
+		{
+			"checksumSHA1": "pxzqs6Vl2rIxby1T4Rr0stHUY5M=",
+			"origin": "github.com/knative/serving/vendor/github.com/google/go-containerregistry/pkg/name",
+			"path": "github.com/google/go-containerregistry/pkg/name",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "omI9RAAedu2M07pLybTcSJ6v6So=",
+			"path": "github.com/knative/eventing-contrib/contrib/github/pkg/apis/sources/v1alpha1",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		},
+		{
+			"checksumSHA1": "52b99fQHsLP6YH48vVCpYJ9a8hU=",
+			"path": "github.com/knative/eventing-contrib/contrib/github/pkg/client/clientset/versioned",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		},
+		{
+			"checksumSHA1": "5hHODs6Cqv1tXnu9S0or6o+42G8=",
+			"path": "github.com/knative/eventing-contrib/contrib/github/pkg/client/clientset/versioned/scheme",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		},
+		{
+			"checksumSHA1": "idUYcbXEKVFUAzSiwEpcJFlCVto=",
+			"path": "github.com/knative/eventing-contrib/contrib/github/pkg/client/clientset/versioned/typed/sources/v1alpha1",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		},
+		{
+			"checksumSHA1": "lJLqqTRgF80/WBYOrH98IDvxdg8=",
+			"origin": "github.com/knative/eventing-contrib/vendor/github.com/knative/pkg/apis/duck/v1alpha1",
+			"path": "github.com/knative/pkg/apis/duck/v1alpha1",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		},
+		{
+			"checksumSHA1": "53onVBkBoSR9i18Dp85QUQXo7uw=",
+			"origin": "github.com/knative/serving/vendor/github.com/knative/pkg/apis/testing",
+			"path": "github.com/knative/pkg/apis/testing",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "/xc37noYeL3SLk0VuUx76xVWVqk=",
+			"origin": "github.com/knative/serving/vendor/github.com/knative/pkg/configmap",
+			"path": "github.com/knative/pkg/configmap",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "u/RydNR7BLZhjotYi3Eye9EUpEI=",
+			"origin": "github.com/knative/serving/vendor/github.com/knative/pkg/configmap/testing",
+			"path": "github.com/knative/pkg/configmap/testing",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "ElU8gM0jAqGq07aiAyx6QsvLDKw=",
+			"origin": "github.com/knative/serving/vendor/github.com/knative/pkg/logging/testing",
+			"path": "github.com/knative/pkg/logging/testing",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "9qqikuFQE5W8bLWK/4OYrwfujPY=",
+			"origin": "github.com/knative/serving/vendor/github.com/knative/pkg/ptr",
+			"path": "github.com/knative/pkg/ptr",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "1POxLjsqotgN/5v2GV69Ucs/8ms=",
+			"origin": "github.com/knative/serving/vendor/github.com/knative/pkg/system",
+			"path": "github.com/knative/pkg/system",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "+n+wtHNU7aoK0dq3HevL5HE37xQ=",
+			"origin": "github.com/knative/serving/vendor/github.com/knative/pkg/system/testing",
+			"path": "github.com/knative/pkg/system/testing",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "Kv2hXBSynBLxXI44drJeDI11xIE=",
+			"path": "github.com/knative/serving/pkg/apis/autoscaling",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "+I9Jdg/nHn+n2ukcQpiupl0rEcE=",
+			"path": "github.com/knative/serving/pkg/apis/autoscaling/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "2ViT2ktfzLyaryRANLlMlk6OV4g=",
+			"path": "github.com/knative/serving/pkg/apis/config",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "U0M4wK4Vu7UnI997R8mBzRmDmgg=",
+			"path": "github.com/knative/serving/pkg/apis/networking",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "RLpEoPd7mlLwqKXtAXVHK05tzFo=",
+			"path": "github.com/knative/serving/pkg/apis/networking/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "Mb0DayHHzdvAvKtyPYXYnvzKsnA=",
+			"path": "github.com/knative/serving/pkg/apis/serving",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "t3oi9KMul1XDxNf3XIgvFWS3pxw=",
+			"path": "github.com/knative/serving/pkg/apis/serving/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "KnCE7Bf2rhTKShCy+VsdJxSX2cY=",
+			"path": "github.com/knative/serving/pkg/apis/serving/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "+pwET6k+srfgUF5QU0Cg/Oy7uzU=",
+			"path": "github.com/knative/serving/pkg/client/clientset/versioned",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "P9UaCsa9536pmNyEOybSmSVbmMs=",
+			"path": "github.com/knative/serving/pkg/client/clientset/versioned/scheme",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "/iklpXpHBj17LDsHeHOsyTajvSc=",
+			"path": "github.com/knative/serving/pkg/client/clientset/versioned/typed/autoscaling/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "gbeK1G0iu0viljkFpsRfZXD83RU=",
+			"path": "github.com/knative/serving/pkg/client/clientset/versioned/typed/networking/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "724W9a+i4gHQ7aTjvlc8cUKYB4A=",
+			"path": "github.com/knative/serving/pkg/client/clientset/versioned/typed/serving/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "8rKGkQbLPmN/k9QeWqj/QBlW5Tk=",
+			"path": "github.com/knative/serving/pkg/client/clientset/versioned/typed/serving/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "zXomv4i4Q94teiXvnLQHfHEIi1g=",
+			"origin": "github.com/knative/serving/vendor/go.uber.org/zap/internal/ztest",
+			"path": "go.uber.org/zap/internal/ztest",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "lrLB9tR78lH/Pbd8HqDdsMEIg00=",
+			"origin": "github.com/knative/serving/vendor/go.uber.org/zap/zaptest",
+			"path": "go.uber.org/zap/zaptest",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "X+MOq+9iD67xt3HkD+KDhzyUwqo=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers",
+			"path": "k8s.io/client-go/informers",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "2zgwBHLPu03MNnEaEUS8uaWaXJk=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/admissionregistration",
+			"path": "k8s.io/client-go/informers/admissionregistration",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "N92aS6Zki8tef89Z3YWS1cN+C3E=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/admissionregistration/v1alpha1",
+			"path": "k8s.io/client-go/informers/admissionregistration/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "oMuLS2T89n9vONwXo8yHIe9yvH0=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/admissionregistration/v1beta1",
+			"path": "k8s.io/client-go/informers/admissionregistration/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "sSFLvpp9BB3xC4gZPoD6jSYXXE0=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/apps",
+			"path": "k8s.io/client-go/informers/apps",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "KohwsINmm6Zf4EiRWgQhR/eMzSY=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/apps/v1",
+			"path": "k8s.io/client-go/informers/apps/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "YIXWlsoQMz6J9ay2ZwVRT2aBsTg=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/apps/v1beta1",
+			"path": "k8s.io/client-go/informers/apps/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "K15j3NfXdDYY6sWrzX74yAUN2Xw=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/apps/v1beta2",
+			"path": "k8s.io/client-go/informers/apps/v1beta2",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "nsmda9f5Htp2dQGuWqwujkclZ5M=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/autoscaling",
+			"path": "k8s.io/client-go/informers/autoscaling",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "XAi3kAT48DQPTuUowVMZaeGPoDw=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/autoscaling/v1",
+			"path": "k8s.io/client-go/informers/autoscaling/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "BTkRCzT4+ShdNjapCIX6K87gJKs=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/autoscaling/v2beta1",
+			"path": "k8s.io/client-go/informers/autoscaling/v2beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "Rp5pcgh4ltLM6RDiICxFRT1d4NA=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/autoscaling/v2beta2",
+			"path": "k8s.io/client-go/informers/autoscaling/v2beta2",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "2EcOuPhLdxPPi8sXgtLGOIuFh4I=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/batch",
+			"path": "k8s.io/client-go/informers/batch",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "4/yM7dTFHqdmk1NoOcN7bcgPxbk=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/batch/v1",
+			"path": "k8s.io/client-go/informers/batch/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "rF4Vm2LGN/YsKy1nGu57pHv3ahQ=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/batch/v1beta1",
+			"path": "k8s.io/client-go/informers/batch/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "GBei59PSww0VBUb2QXO/OGwr/4A=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/batch/v2alpha1",
+			"path": "k8s.io/client-go/informers/batch/v2alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "oiFPsZc3/EOYyZrs5fADTaXAtKo=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/certificates",
+			"path": "k8s.io/client-go/informers/certificates",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "iEP9OMxu2+rC6B6N01KzxnKFP98=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/certificates/v1beta1",
+			"path": "k8s.io/client-go/informers/certificates/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "F0fCwDmngT+FXmvlW/Lj6nqkFIw=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/coordination",
+			"path": "k8s.io/client-go/informers/coordination",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "ozD9yd6Q1gFsZy9KRrBptKLAqu8=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/coordination/v1beta1",
+			"path": "k8s.io/client-go/informers/coordination/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "3vJtYRM8r3Dy7iaGEJMAglE8vK8=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/core",
+			"path": "k8s.io/client-go/informers/core",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "ghOUo22Zl0TZN/joQo39qaLJgcY=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/core/v1",
+			"path": "k8s.io/client-go/informers/core/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "1RkuEFY/SOKublVCwE4Qk9VlnLg=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/events",
+			"path": "k8s.io/client-go/informers/events",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "9JhlVWNMSoJ65gYF2bqqt6vvSjk=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/events/v1beta1",
+			"path": "k8s.io/client-go/informers/events/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "+CTE63d9UB5uS+Ao0edI/ne3H64=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/extensions",
+			"path": "k8s.io/client-go/informers/extensions",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "NCOu8aqn0uliiWbd3W18lyFAzI4=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/extensions/v1beta1",
+			"path": "k8s.io/client-go/informers/extensions/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "0ctvQ4/cSu9xgPOo4ky8AD/VudY=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/internalinterfaces",
+			"path": "k8s.io/client-go/informers/internalinterfaces",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "aVkZwnXM/D7xM6dHX3Xe0bXNaBc=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/networking",
+			"path": "k8s.io/client-go/informers/networking",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "5FQJDP6s7izuKRwC5F+LVDLh02w=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/networking/v1",
+			"path": "k8s.io/client-go/informers/networking/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "UGn44lo7oEOndsYz5OZCDuu4HC0=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/policy",
+			"path": "k8s.io/client-go/informers/policy",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "ZKy+mh+M4cSly+fP/dH5nMPfdRk=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/policy/v1beta1",
+			"path": "k8s.io/client-go/informers/policy/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "G7FokXSVMsangulZb5Vz++xjkNk=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/rbac",
+			"path": "k8s.io/client-go/informers/rbac",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "2wJisYqyrL5D9VjqY0i5fNcEOG8=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/rbac/v1",
+			"path": "k8s.io/client-go/informers/rbac/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "liMIMiJJOY10iVNA5R27W/Z6WfQ=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/rbac/v1alpha1",
+			"path": "k8s.io/client-go/informers/rbac/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "7wibaGrCbsS9QYsQyjhh6Rs5+1I=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/rbac/v1beta1",
+			"path": "k8s.io/client-go/informers/rbac/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "toqc+S1VfKAks0YclEhBnyTHtqU=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/scheduling",
+			"path": "k8s.io/client-go/informers/scheduling",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "ZcnTiGzX81CTw1Rh733AauL749w=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/scheduling/v1alpha1",
+			"path": "k8s.io/client-go/informers/scheduling/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "wfDFJnqcUdtTPSdjJxf4088vCKE=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/scheduling/v1beta1",
+			"path": "k8s.io/client-go/informers/scheduling/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "UZoFa89fY1+x/d8I0Or7ITbHyN4=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/settings",
+			"path": "k8s.io/client-go/informers/settings",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "ls/c3RW5mI2/a1qDK6k9VTLIRfg=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/settings/v1alpha1",
+			"path": "k8s.io/client-go/informers/settings/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "lZtp5oPjEobZQz0k1OTGxR55fGA=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/storage",
+			"path": "k8s.io/client-go/informers/storage",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "OGN3LNQWE8tEG87m4rKsmnOE97c=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/storage/v1",
+			"path": "k8s.io/client-go/informers/storage/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "q2ynK2xFUXbi6pNfZhaVnybfa0U=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/storage/v1alpha1",
+			"path": "k8s.io/client-go/informers/storage/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "b/j3jwW7hLgPFXmyTyv+vJLTG98=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/informers/storage/v1beta1",
+			"path": "k8s.io/client-go/informers/storage/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "nAepKKcR9Bop/I3btn9hZYeQLfI=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/admissionregistration/v1alpha1",
+			"path": "k8s.io/client-go/listers/admissionregistration/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "z9lrxZhC4pBFH/Ce9gWSwq26bgs=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/admissionregistration/v1beta1",
+			"path": "k8s.io/client-go/listers/admissionregistration/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "xsKS1rrY/fd4tGQPoAMLuWcwr1g=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/apps/v1",
+			"path": "k8s.io/client-go/listers/apps/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "pHSCdL/1Xvd9YsWb9IT7jaVoI78=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/apps/v1beta1",
+			"path": "k8s.io/client-go/listers/apps/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "+JZfIORgMRG+qOsBWv9m/DNawwU=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/apps/v1beta2",
+			"path": "k8s.io/client-go/listers/apps/v1beta2",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "x1kbvyFAZmTem0kw4D0/rY2jpfw=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/autoscaling/v1",
+			"path": "k8s.io/client-go/listers/autoscaling/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "9lD3SuJFdfQO72GO5moUyRnAMZQ=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/autoscaling/v2beta1",
+			"path": "k8s.io/client-go/listers/autoscaling/v2beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "3Ub98KrEKY15mAm0lrYykHY3nPA=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/autoscaling/v2beta2",
+			"path": "k8s.io/client-go/listers/autoscaling/v2beta2",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "seIjr3XEEzAB4jyKkWLrW8Dtejg=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/batch/v1",
+			"path": "k8s.io/client-go/listers/batch/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "B5zOrc1CuGtSrceRilDimH8px/A=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/batch/v1beta1",
+			"path": "k8s.io/client-go/listers/batch/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "Giphy/EFw4v1eDIv/XQdIIebGXE=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/batch/v2alpha1",
+			"path": "k8s.io/client-go/listers/batch/v2alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "fXGOpQKkJ34MUtlwjBTihs4iFIU=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/certificates/v1beta1",
+			"path": "k8s.io/client-go/listers/certificates/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "4CPSFmBDO7NymXPsohK0zrd1bwY=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/coordination/v1beta1",
+			"path": "k8s.io/client-go/listers/coordination/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "eo9HuDZ9dFquG7o5S4hfj20wkmE=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/core/v1",
+			"path": "k8s.io/client-go/listers/core/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "lWX0qwa0bzQvVVlYLc5yRfTKgDc=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/events/v1beta1",
+			"path": "k8s.io/client-go/listers/events/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "2sbrJm0MD6BiQhLGZEQpIYh7AR8=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/extensions/v1beta1",
+			"path": "k8s.io/client-go/listers/extensions/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "nPvOBAjFxgx4FlnTqbO8UTyF7Jc=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/networking/v1",
+			"path": "k8s.io/client-go/listers/networking/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "9OfRo5vb9kZZESrpybK5rZbaZcU=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/policy/v1beta1",
+			"path": "k8s.io/client-go/listers/policy/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "/wki0vEWWt8fqyCWbv85zSc9CY0=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/rbac/v1",
+			"path": "k8s.io/client-go/listers/rbac/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "mvGh6RV97e0Ma2rpyIPRUMXDxto=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/rbac/v1alpha1",
+			"path": "k8s.io/client-go/listers/rbac/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "+CKo9Czp5wVsBTOoAqL9eeK3TCE=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/rbac/v1beta1",
+			"path": "k8s.io/client-go/listers/rbac/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "90D/F1+0exKpXgqlbjNw5WzzgSk=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/scheduling/v1alpha1",
+			"path": "k8s.io/client-go/listers/scheduling/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "RlrmHRhFYGpp9zWZQC1gv2FKNx4=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/scheduling/v1beta1",
+			"path": "k8s.io/client-go/listers/scheduling/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "g1kyaJFmmndTiBPpUo6IYNqKMGI=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/settings/v1alpha1",
+			"path": "k8s.io/client-go/listers/settings/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "ohiTjYyF5MFMT2F+k1DJGZ2lg6w=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/storage/v1",
+			"path": "k8s.io/client-go/listers/storage/v1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "Rf3sJ19teCSEcAwDquA4dB+kqCE=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/storage/v1alpha1",
+			"path": "k8s.io/client-go/listers/storage/v1alpha1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		},
+		{
+			"checksumSHA1": "oQHAPXiRRDW5gapsTFg/WrtrQuk=",
+			"origin": "github.com/knative/serving/vendor/k8s.io/client-go/listers/storage/v1beta1",
+			"path": "k8s.io/client-go/listers/storage/v1beta1",
+			"revision": "4a104cadf6c25ee8dab9f60b04f08de503b65585",
+			"revisionTime": "2019-06-17T06:48:44Z"
+		}
+	],
+	"rootPath": "github.com/bluebosh/knap-cli"
+}
