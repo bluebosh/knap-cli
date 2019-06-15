@@ -27,7 +27,7 @@ var bindServiceCmd = &cobra.Command{
 	Short: "[Not implement] Bind a service to one application",
 	Long: `[Not implement] Bind a service to one application`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("bindService called")
+		fmt.Println("[Not implement] bindService called")
 	},
 }
 

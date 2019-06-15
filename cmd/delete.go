@@ -46,7 +46,7 @@ var deleteCmd = &cobra.Command{
 		err = knapClient.KnapV1alpha1().Appengines("default").Delete(args[0], metav1.NewDeleteOptions(0))
 		if err != nil {
 			//glog.Fatalf("Error deleting application engine: %s", args[0])
-			fmt.Println("Error deleting application engine", color.CyanString(args[0]))
+			fmt.Println("Error deleting application engine", color.CyanString(args[0]), err)
 		} else {
 			fmt.Println("Application engine", color.CyanString(args[0]), "is deleted successfully")
 		}

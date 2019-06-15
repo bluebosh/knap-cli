@@ -27,7 +27,7 @@ var servicesCmd = &cobra.Command{
 	Short: "[Not implement] Show all services",
 	Long: `[Not implement] Show all services`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("services called")
+		fmt.Println("[Not implement] services called")
 	},
 }
 

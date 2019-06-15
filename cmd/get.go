@@ -46,15 +46,17 @@ var getCmd = &cobra.Command{
 		app, err := knapClient.KnapV1alpha1().Appengines("default").Get(args[0], metav1.GetOptions{})
 
 		if err != nil {
-			fmt.Println("Error getting application engine", color.CyanString(args[0]))
+			fmt.Println("Error getting application engine", color.CyanString(args[0]), err)
 		} else {
 			fmt.Println(color.CyanString("%-30s","Application Name:"), app.Spec.AppName + "-appengine")
 			fmt.Println(color.CyanString("%-30s","Application Version:"), app.Generation)
 			fmt.Println(color.CyanString("%-30s","Application Git Repo:"), app.Spec.GitRepo)
 			fmt.Println(color.CyanString("%-30s","Application Git Revision:"), app.Spec.GitRevision)
 			fmt.Println(color.CyanString("%-30s","Application Template:"), app.Spec.PipelineTemplate)
+			fmt.Println(color.CyanString("%-30s","Application Ready:"), app.Status.Ready)
 			fmt.Println(color.CyanString("%-30s","Application Status:"), app.Status.Status)
-			fmt.Println(color.CyanString("%-30s","Application Instance:"), "1")
+			fmt.Println(color.CyanString("%-30s","Application Instance:"), fmt.Sprint(app.Status.Instance))
+			fmt.Println(color.CyanString("%-30s","Application Size:"), fmt.Sprint(app.Spec.Size))
 			fmt.Println(color.CyanString("%-30s","Application Domain:"),"https://" + app.Status.Domain)
 		}
 	},

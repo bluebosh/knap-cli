@@ -25,6 +25,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/oidc" // from https://github.com/kubernetes/client-go/issues/345
 	"github.com/fatih/color"
+	"strconv"
 )
 
 var foo string
@@ -36,8 +37,6 @@ var createCmd = &cobra.Command{
 	Long: `Create a new knap appengine`,
 	Args: cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(cmd.Flag("foo").Value)
-
 		cfg, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
 		if err != nil {
 			glog.Fatalf("Error building kubeconfig: %v", err)
@@ -48,32 +47,37 @@ var createCmd = &cobra.Command{
 			glog.Fatalf("Error building knap clientset: %v", err)
 		}
 
-		//app = knapv1.Appengine{
-		//	ObjectMeta: metav1.ObjectMeta{
-		//		Name:      args[0],
-		//		Namespace: "default",
-		//	},
-		//	Spec:
-		//		appName:
-		//		pipelinev1alpha1.PipelineResourceSpec{
-		//		Type: pipelinev1alpha1.PipelineResourceTypeGit,
-		//		Params: []pipelinev1alpha1.Param{{
-		//			Name:  "url",
-		//			Value: app.Spec.GitRepo,
-		//		}, {
-		//			Name:  "revision",
-		//			Value: app.Spec.GitRevision,
-		//		}},
-		//	},
-		//}
-		//_, err = knapClient.KnapV1alpha1().Appengines("default").Create(args[0])
-		//
-		//if err != nil {
-		//	//glog.Fatalf("Error creating application engine: %s", args[0])
-		//	fmt.Println("Error creating application engine", color.CyanString(args[0]))
-		//} else {
-		//	fmt.Println("Application engine", color.CyanString(args[0]), "is created successfully")
-		//}
+
+		size, err:= strconv.ParseInt(cmd.Flag("size").Value.String(),10,32)
+		size32 := int32(size)
+		if err != nil {
+			//glog.Fatalf("Error creating application engine: %s", args[0])
+			fmt.Println("Error parsing size parameter", err)
+		}
+
+		app := &knapv1.Appengine{
+			ObjectMeta: metav1.ObjectMeta{
+				Name:      args[0] + "-appengine",
+				Namespace: "default",
+			},
+			Spec:
+			knapv1.AppengineSpec{
+				AppName: args[0],
+				GitRepo: cmd.Flag("gitrepo").Value.String(),
+				GitRevision: cmd.Flag("gitrevision").Value.String(),
+				Size: size32,
+				PipelineTemplate: cmd.Flag("template").Value.String(),
+				// AutoTrigger: cmd.Flag("autotrigger").Value.String(),
+			},
+		}
+		_, err = knapClient.KnapV1alpha1().Appengines("default").Create(app)
+
+		if err != nil {
+			//glog.Fatalf("Error creating application engine: %s", args[0])
+			fmt.Println("Error creating application engine", color.CyanString(args[0]), err)
+		} else {
+			fmt.Println("Application engine", color.CyanString(args[0]), "is created successfully")
+		}
 	},
 }
 
@@ -88,9 +92,9 @@ func init() {
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	createCmd.Flags().StringP("gitrepo","go","", "The git repo of the appengine")
-	createCmd.Flags().StringP("gitrevision","gn","", "The git revision of the appengine")
+	createCmd.Flags().StringP("gitrepo","r","", "The git repo of the appengine")
+	createCmd.Flags().StringP("gitrevision","v","", "The git revision of the appengine")
 	createCmd.Flags().StringP("template","t","", "The template of the appengine")
 	createCmd.Flags().Int32P("size","s",1, "The size of the appengine")
-	createCmd.Flags().BoolP("autotrigger", "at", false, "The auto trigger of the appengine")
+	createCmd.Flags().BoolP("autotrigger", "a", false, "The auto trigger of the appengine")
 }

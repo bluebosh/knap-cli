@@ -27,7 +27,7 @@ var marketplaceCmd = &cobra.Command{
 	Short: "[Not implement] Show service marketplace",
 	Long: `[Not implement] service marketplace`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("marketplace called")
+		fmt.Println("[Not implement] marketplace called")
 	},
 }
 
