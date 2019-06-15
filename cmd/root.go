@@ -65,7 +65,10 @@ func init() {
   rootCmd.Flags().BoolP("verbose","v",false, "Print API request diagnostics to stdout")
 
   //kubeconfig = "/Users/jordan/.bluemix/plugins/container-service/clusters/knative_pipeline/kube-config-dal10-knative_pipeline.yml"
-  kubeconfig = "/Users/jordanzt/.bluemix/plugins/container-service/clusters/knative_pipeline/kube-config-dal10-knative_pipeline.yml"
+  kubeconfig = os.Getenv("KUBECONFIG")
+  if kubeconfig == "" {
+    kubeconfig = "/Users/jordanzt/.bluemix/plugins/container-service/clusters/knative_pipeline/kube-config-dal10-knative_pipeline.yml"
+  }
 }
 
 

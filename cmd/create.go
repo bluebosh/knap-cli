@@ -20,12 +20,14 @@ import (
 	knapclientset "github.com/bluebosh/knap/pkg/client/clientset/versioned"
 	knapv1 "github.com/bluebosh/knap/pkg/apis/knap/v1alpha1"
 	"github.com/golang/glog"
+	v1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/tools/clientcmd"
 	"github.com/spf13/cobra"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/oidc" // from https://github.com/kubernetes/client-go/issues/345
 	"github.com/fatih/color"
 	"strconv"
+	"k8s.io/client-go/kubernetes"
 )
 
 var foo string
@@ -42,6 +44,11 @@ var createCmd = &cobra.Command{
 			glog.Fatalf("Error building kubeconfig: %v", err)
 		}
 
+		clientset, err := kubernetes.NewForConfig(cfg)
+		if err != nil {
+			glog.Fatalf("Error building knap clientset: %v", err)
+		}
+
 		knapClient, err := knapclientset.NewForConfig(cfg)
 		if err != nil {
 			glog.Fatalf("Error building knap clientset: %v", err)
@@ -55,6 +62,33 @@ var createCmd = &cobra.Command{
 			fmt.Println("Error parsing size parameter", err)
 		}
 
+		git_access_token := cmd.Flag("git-access-token").Value.String()
+		if git_access_token != "" {
+
+			s := v1.Secret{
+				TypeMeta: metav1.TypeMeta{
+					Kind:       "Secret",
+					APIVersion: "apps/v1beta1",
+				},
+				ObjectMeta: metav1.ObjectMeta{
+					Namespace: "default",
+					Name:      "githubsecret",
+				},
+				StringData: map[string]string{
+					"accessToken": git_access_token,
+					"secretToken": "iTFLJhSMSk0=",
+				},
+				Type: "Opaque",
+			}
+
+			secret, err := clientset.CoreV1().Secrets("default").Create(&s)
+			if err != nil {
+				fmt.Println(err.Error())
+			} else {
+				fmt.Printf("Created Secret %q.\n", secret.GetObjectMeta().GetName())
+			}
+		}
+
 		app := &knapv1.Appengine{
 			ObjectMeta: metav1.ObjectMeta{
 				Name:      args[0] + "-appengine",
@@ -64,14 +98,15 @@ var createCmd = &cobra.Command{
 			knapv1.AppengineSpec{
 				AppName: args[0],
 				GitRepo: cmd.Flag("gitrepo").Value.String(),
+				GitAccessToken: cmd.Flag("git-access-token").Value.String(),
 				GitRevision: cmd.Flag("gitrevision").Value.String(),
 				Size: size32,
 				PipelineTemplate: cmd.Flag("template").Value.String(),
 				// AutoTrigger: cmd.Flag("autotrigger").Value.String(),
 			},
 		}
-		_, err = knapClient.KnapV1alpha1().Appengines("default").Create(app)
 
+		_, err = knapClient.KnapV1alpha1().Appengines("default").Create(app)
 		if err != nil {
 			//glog.Fatalf("Error creating application engine: %s", args[0])
 			fmt.Println("Error creating application engine", color.CyanString(args[0]), err)
@@ -93,6 +128,7 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	createCmd.Flags().StringP("gitrepo","r","", "The git repo of the appengine")
+	createCmd.Flags().StringP("git-access-token","r","", "The access token of the target application git repo")
 	createCmd.Flags().StringP("gitrevision","v","", "The git revision of the appengine")
 	createCmd.Flags().StringP("template","t","", "The template of the appengine")
 	createCmd.Flags().Int32P("size","s",1, "The size of the appengine")
