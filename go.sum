@@ -140,6 +140,7 @@ github.com/julienschmidt/httprouter v1.2.0/go.mod h1:SYymIcj16QtmaHHD7aYtjjsJG7V
 github.com/kisielk/errcheck v1.1.0/go.mod h1:EZBBE59ingxPouuu3KfxchcWSUPOHkagtvWXihfKN4Q=
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
 github.com/knative/build v0.6.0/go.mod h1:/sU74ZQkwlYA5FwYDJhYTy61i/Kn+5eWfln2jDbw3Qo=
+github.com/knative/eventing-contrib v0.6.0 h1:ScjLMLfJ3ANsWSRIAGV1hRejbEbCPEoJkiwADKPKTug=
 github.com/knative/pkg v0.0.0-20190610153941-28f181241cdb h1:X/FTe0HyoDh1Vn285dR2s5WpQ309RA6Rxe/YluyDN2s=
 github.com/knative/pkg v0.0.0-20190610153941-28f181241cdb/go.mod h1:7Ijfhw7rfB+H9VtosIsDYvZQ+qYTz7auK3fHW/5z4ww=
 github.com/knative/serving v0.6.1/go.mod h1:ljvMfwQy2qanaM/8xnBSK4Mz3Vv2NawC2fo5kFRJS1A=

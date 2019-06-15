@@ -1,0 +1,52 @@
+{
+	"comment": "",
+	"ignore": "",
+	"package": [
+		{
+			"checksumSHA1": "7QWn2gbBDds4wUOR+A7KnfVozLY=",
+			"origin": "github.com/knative/eventing-contrib/vendor/github.com/ghodss/yaml",
+			"path": "github.com/ghodss/yaml",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		},
+		{
+			"checksumSHA1": "O8R7tM0NEeUkh41G+/0d1h81e+g=",
+			"origin": "github.com/knative/eventing-contrib/vendor/github.com/google/go-cmp/cmp/cmpopts",
+			"path": "github.com/google/go-cmp/cmp/cmpopts",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		},
+		{
+			"checksumSHA1": "omI9RAAedu2M07pLybTcSJ6v6So=",
+			"path": "github.com/knative/eventing-contrib/contrib/github/pkg/apis/sources/v1alpha1",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		},
+		{
+			"checksumSHA1": "52b99fQHsLP6YH48vVCpYJ9a8hU=",
+			"path": "github.com/knative/eventing-contrib/contrib/github/pkg/client/clientset/versioned",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		},
+		{
+			"checksumSHA1": "5hHODs6Cqv1tXnu9S0or6o+42G8=",
+			"path": "github.com/knative/eventing-contrib/contrib/github/pkg/client/clientset/versioned/scheme",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		},
+		{
+			"checksumSHA1": "idUYcbXEKVFUAzSiwEpcJFlCVto=",
+			"path": "github.com/knative/eventing-contrib/contrib/github/pkg/client/clientset/versioned/typed/sources/v1alpha1",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		},
+		{
+			"checksumSHA1": "lJLqqTRgF80/WBYOrH98IDvxdg8=",
+			"origin": "github.com/knative/eventing-contrib/vendor/github.com/knative/pkg/apis/duck/v1alpha1",
+			"path": "github.com/knative/pkg/apis/duck/v1alpha1",
+			"revision": "aaf716f3137baa19df19a848db03de3649f871b3",
+			"revisionTime": "2019-06-14T17:10:44Z"
+		}
+	],
+	"rootPath": "github.com/bluebosh/knap-cli"
+}
