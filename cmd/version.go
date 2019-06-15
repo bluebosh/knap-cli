@@ -30,6 +30,6 @@ var versionCmd = &cobra.Command{
 	Short: "Print the version number of knap cli",
 	Long:  `The version of knap cli`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("knap cli v0.1.0")
+		fmt.Println("knap cli v0.3.1")
 	},
 }

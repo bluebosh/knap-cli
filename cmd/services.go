@@ -24,10 +24,10 @@ import (
 // servicesCmd represents the services command
 var servicesCmd = &cobra.Command{
 	Use:   "services",
-	Short: "[Not implement] Show all services",
-	Long: `[Not implement] Show all services`,
+	Short: "[Not implemented] Show all services",
+	Long: `[Not implemented] Show all services`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("[Not implement] services called")
+		fmt.Println("[Not implemented] services called")
 	},
 }
 

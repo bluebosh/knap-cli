@@ -44,10 +44,10 @@ var listCmd = &cobra.Command{
 		}
 
 		appLst, err := knapClient.KnapV1alpha1().Appengines("default").List(metav1.ListOptions{})
-		color.Cyan("%-30s%-20s%-20s%-20s\n", "Application Name", "Ready", "Instance", "Domain")
+		color.Cyan("%-30s%-20s%-20s%-20s%-20s\n", "Engine Name", "Application Name", "Ready", "Instance", "Domain")
 		for i := 0; i < len(appLst.Items); i++ {
 			app := appLst.Items[i]
-			fmt.Printf("%-30s%-20s%-20s%-20s\n", app.Name, app.Status.Ready, fmt.Sprint(app.Status.Instance) + "/" + fmt.Sprint(app.Spec.Size), app.Status.Domain)
+			fmt.Printf("%-30s%-20s%-20s%-20s%-20s\n", app.Name, app.Spec.AppName, app.Status.Ready, fmt.Sprint(app.Status.Instance) + "/" + fmt.Sprint(app.Spec.Size), app.Status.Domain)
 		}
 		fmt.Println("\nThere are", color.CyanString("%v",len(appLst.Items)), "application engine(s)\n")
 	},
