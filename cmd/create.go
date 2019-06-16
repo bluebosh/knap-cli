@@ -65,9 +65,9 @@ var createCmd = &cobra.Command{
 				AppName: args[0],
 				GitRepo: cmd.Flag("gitrepo").Value.String(),
 				GitRevision: cmd.Flag("gitrevision").Value.String(),
+				// GitWatch: cmd.Flag("gitWatch").Value.String(),
 				Size: size32,
 				PipelineTemplate: cmd.Flag("template").Value.String(),
-				// AutoTrigger: cmd.Flag("autotrigger").Value.String(),
 			},
 		}
 		_, err = knapClient.KnapV1alpha1().Appengines("default").Create(app)
