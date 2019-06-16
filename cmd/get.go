@@ -48,7 +48,7 @@ var getCmd = &cobra.Command{
 		if err != nil {
 			fmt.Println("Error getting application engine", color.CyanString(args[0]), err)
 		} else {
-			fmt.Println(color.CyanString("%-30s","Application Name:"), app.Spec.AppName + "-appengine")
+			fmt.Println(color.CyanString("%-30s","Application Name:"), app.Name)
 			fmt.Println(color.CyanString("%-30s","Application Version:"), app.Generation)
 			fmt.Println(color.CyanString("%-30s","Application Git Repo:"), app.Spec.GitRepo)
 			fmt.Println(color.CyanString("%-30s","Application Git Revision:"), app.Spec.GitRevision)
