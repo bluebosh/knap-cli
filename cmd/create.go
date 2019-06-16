@@ -92,9 +92,10 @@ func init() {
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
+	createCmd.Flags().StringP("resourcetype","e","", "The resource type the appengine [Not implemented]")
 	createCmd.Flags().StringP("gitrepo","r","", "The git repo of the appengine")
 	createCmd.Flags().StringP("gitrevision","v","", "The git revision of the appengine")
 	createCmd.Flags().StringP("template","t","", "The template of the appengine")
 	createCmd.Flags().Int32P("size","s",1, "The size of the appengine")
-	createCmd.Flags().BoolP("autotrigger", "a", false, "The auto trigger of the appengine")
+	createCmd.Flags().BoolP("watch", "a", false, "The auto trigger of the appengine [Not implemented]")
 }
