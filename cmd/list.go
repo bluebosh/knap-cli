@@ -47,7 +47,7 @@ var listCmd = &cobra.Command{
 		color.Cyan("%-30s%-20s%-20s%-20s%-20s\n", "Application Name", "Version", "Ready", "Instance", "Domain")
 		for i := 0; i < len(appLst.Items); i++ {
 			app := appLst.Items[i]
-			fmt.Printf("%-30s%-20s%-20s%-20s%-20s\n", app.Spec.AppName, app.Generation, app.Status.Ready, fmt.Sprint(app.Status.Instance) + "/" + fmt.Sprint(app.Spec.Size), app.Status.Domain)
+			fmt.Printf("%-30s%-20s%-20s%-20s%-20s\n", app.Name, fmt.Sprint(app.Generation), app.Status.Ready, fmt.Sprint(app.Status.Instance) + "/" + fmt.Sprint(app.Spec.Size), app.Status.Domain)
 		}
 		fmt.Println("\nThere are", color.CyanString("%v",len(appLst.Items)), "application engine(s)\n")
 	},

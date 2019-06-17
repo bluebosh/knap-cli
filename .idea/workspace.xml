@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5bd9714f-14d6-43a1-bb5d-c0fca594fde1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/create.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knap-cli" beforeDir="false" afterPath="$PROJECT_DIR$/knap-cli" afterDir="false" />
-    </list>
+    <list default="true" id="5bd9714f-14d6-43a1-bb5d-c0fca594fde1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,21 +9,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmd/root.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="834">
-              <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmd/list.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="49" column="72" selection-start-line="49" selection-start-column="72" selection-end-line="49" selection-end-column="72" />
+            <state relative-caret-position="159">
+              <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
               <folding>
                 <element signature="e#587#951#0" expanded="true" />
               </folding>
@@ -35,50 +22,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmd/spaces.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmd/delete.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmd/edit.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="87" column="101" selection-start-line="87" selection-start-column="101" selection-end-line="87" selection-end-column="101" />
-              <folding>
-                <element signature="e#587#631#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmd/services.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="26" selection-start-line="26" selection-end-line="27" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmd/create.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="99" column="101" selection-start-line="99" selection-start-column="101" selection-end-line="99" selection-end-column="101" />
+            <state relative-caret-position="167">
+              <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
               <folding>
                 <element signature="e#587#1016#0" expanded="true" />
               </folding>
@@ -87,12 +35,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmd/templates.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
+              <folding>
+                <element signature="e#587#1001#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmd/get.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="60" column="9" selection-start-line="47" selection-start-column="8" selection-end-line="60" selection-end-column="9" />
+            <state relative-caret-position="270">
+              <caret line="18" selection-start-line="18" selection-end-line="25" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmd/delete.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="46" selection-start-line="48" selection-start-column="91" selection-end-line="51" selection-end-column="9" />
               <folding>
-                <element signature="e#587#947#0" expanded="true" />
+                <element signature="e#587#631#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,43 +153,26 @@
             <path>
               <item name="knap-cli" type="b2602c69:ProjectViewProjectNode" />
               <item name="knap-cli" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="knap-cli" type="462c0819:PsiDirectoryNode" />
+              <item name="versioned" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="knap-cli" type="b2602c69:ProjectViewProjectNode" />
               <item name="knap-cli" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="knap-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="cmd" type="462c0819:PsiDirectoryNode" />
+              <item name="versioned" type="462c0819:PsiDirectoryNode" />
+              <item name="scheme" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="knap-cli" type="b2602c69:ProjectViewProjectNode" />
               <item name="knap-cli" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="knap-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="versioned" type="462c0819:PsiDirectoryNode" />
+              <item name="typed" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="knap-cli" type="b2602c69:ProjectViewProjectNode" />
               <item name="knap-cli" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="knap-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="knap-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="knap-cli" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="knap-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="knative" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="knap-cli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="knap-cli" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="knap-cli" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="knative" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="versioned" type="462c0819:PsiDirectoryNode" />
+              <item name="typed" type="462c0819:PsiDirectoryNode" />
+              <item name="knap" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -270,10 +222,9 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20028612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -286,7 +237,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.720548" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.5614458" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -404,10 +355,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cmd/templates.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+        <state relative-caret-position="441">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
-            <element signature="e#587#952#0" expanded="true" />
+            <element signature="e#587#1001#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -431,8 +382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cmd/list.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="49" column="72" selection-start-line="49" selection-start-column="72" selection-end-line="49" selection-end-column="72" />
+        <state relative-caret-position="159">
+          <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
           <folding>
             <element signature="e#587#951#0" expanded="true" />
           </folding>
@@ -448,8 +399,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cmd/delete.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="110">
+          <caret line="46" selection-start-line="48" selection-start-column="91" selection-end-line="51" selection-end-column="9" />
+          <folding>
+            <element signature="e#587#631#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -462,11 +416,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cmd/get.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="60" column="9" selection-start-line="47" selection-start-column="8" selection-end-line="60" selection-end-column="9" />
-          <folding>
-            <element signature="e#587#947#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="25" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -489,8 +440,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cmd/create.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="99" column="101" selection-start-line="99" selection-start-column="101" selection-end-line="99" selection-end-column="101" />
+        <state relative-caret-position="167">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
           <folding>
             <element signature="e#587#1016#0" expanded="true" />
           </folding>
