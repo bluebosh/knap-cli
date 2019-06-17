@@ -74,6 +74,7 @@ var createCmd = &cobra.Command{
 
 		gitAccessToken := cmd.Flag("git-access-token").Value.String()
 		gitRepo := cmd.Flag("gitrepo").Value.String()
+
 		if gitAccessToken != "" && gitRepo != "" {
 
 			s := v1.Secret{
@@ -177,7 +178,6 @@ var createCmd = &cobra.Command{
 				fmt.Printf("Created Github resource %q.\n", secret.GetObjectMeta().GetName())
 			}
 		}
-
 
 		app := &knapv1.Appengine{
 			ObjectMeta: metav1.ObjectMeta{
