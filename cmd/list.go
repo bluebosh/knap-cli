@@ -24,7 +24,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/oidc" // from https://github.com/kubernetes/client-go/issues/345
     "github.com/fatih/color"
-
+	"os"
 )
 
 // listCmd represents the list command
@@ -33,6 +33,10 @@ var listCmd = &cobra.Command{
 	Short: "List all knap appengines",
 	Long: `List all knap appengines`,
 	Run: func(cmd *cobra.Command, args []string) {
+		kubeconfig = rootCmd.Flag("kubeconfig").Value.String()
+		if kubeconfig == "" {
+			kubeconfig = os.Getenv("KUBECONFIG")
+		}
 		cfg, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
 		if err != nil {
 			glog.Fatalf("Error building kubeconfig: %v", err)

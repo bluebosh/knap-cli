@@ -58,14 +58,11 @@ func init() {
   // will be global for your application.
 
   rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.knap.yaml)")
-
+  rootCmd.PersistentFlags().StringP("kubeconfig", "", "", "kube config file (default is KUBECONFIG from ENV property)")
 
   // Cobra also supports local flags, which will only run
   // when this action is called directly.
   rootCmd.Flags().BoolP("verbose","v",false, "Print API request diagnostics to stdout")
-
-  kubeconfig = "/Users/jordan/.bluemix/plugins/container-service/clusters/knative_pipeline/kube-config-dal10-knative_pipeline.yml"
-  //kubeconfig = "/Users/jordanzt/.bluemix/plugins/container-service/clusters/knative_pipeline/kube-config-dal10-knative_pipeline.yml"
 }
 
 
@@ -95,3 +92,10 @@ func initConfig() {
   }
 }
 
+func GetKubeConfig() {
+  kubeconfig = rootCmd.Flag("kubeconfig").Value.String()
+  fmt.Println(kubeconfig)
+  if kubeconfig == "" {
+    kubeconfig = os.Getenv("KUBECONFIG")
+  }
+}
