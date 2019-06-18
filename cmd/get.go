@@ -54,15 +54,16 @@ var getCmd = &cobra.Command{
 			fmt.Println("Error getting application engine", color.CyanString(args[0]), err)
 		} else {
 			fmt.Println(color.CyanString("%-30s","Application Name:"), app.Name)
-			fmt.Println(color.CyanString("%-30s","Application Version:"), app.Generation)
-			fmt.Println(color.CyanString("%-30s","Application Git Repo:"), app.Spec.GitRepo)
-			fmt.Println(color.CyanString("%-30s","Application Git Revision:"), app.Spec.GitRevision)
-			fmt.Println(color.CyanString("%-30s","Application Template:"), app.Spec.PipelineTemplate)
-			fmt.Println(color.CyanString("%-30s","Application Ready:"), app.Status.Ready)
-			fmt.Println(color.CyanString("%-30s","Application Status:"), app.Status.Status)
-			fmt.Println(color.CyanString("%-30s","Application Instance:"), fmt.Sprint(app.Status.Instance))
-			fmt.Println(color.CyanString("%-30s","Application Size:"), fmt.Sprint(app.Spec.Size))
-			fmt.Println(color.CyanString("%-30s","Application Domain:"),"https://" + app.Status.Domain)
+			fmt.Println(color.CyanString("%-30s","Namespace:"), app.Namespace)
+			fmt.Println(color.CyanString("%-30s","Version:"), app.Generation)
+			fmt.Println(color.CyanString("%-30s","Git Repo:"), app.Spec.GitRepo)
+			fmt.Println(color.CyanString("%-30s","Git Revision:"), app.Spec.GitRevision)
+			fmt.Println(color.CyanString("%-30s","Template:"), app.Spec.PipelineTemplate)
+			fmt.Println(color.CyanString("%-30s","Ready:"), app.Status.Ready)
+			fmt.Println(color.CyanString("%-30s","Status:"), app.Status.Status)
+			fmt.Println(color.CyanString("%-30s","Instance:"), fmt.Sprint(app.Status.Instance))
+			fmt.Println(color.CyanString("%-30s","Size:"), fmt.Sprint(app.Spec.Size))
+			fmt.Println(color.CyanString("%-30s","Domain:"),"https://" + app.Status.Domain)
 		}
 	},
 }
