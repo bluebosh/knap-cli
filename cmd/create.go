@@ -63,7 +63,7 @@ var createCmd = &cobra.Command{
 		app := &knapv1.Appengine{
 			ObjectMeta: metav1.ObjectMeta{
 				Name:      args[0] + "-appengine",
-				Namespace: "default",
+				Namespace: cmd.Flag("space").Value.String(),
 			},
 			Spec:
 			knapv1.AppengineSpec{
@@ -98,6 +98,7 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	createCmd.Flags().StringP("resourcetype","e","", "The resource type the appengine [Not implemented]")
+	createCmd.Flags().StringP("namespace","n","", "The namespace of the appengine")
 	createCmd.Flags().StringP("gitrepo","r","", "The git repo of the appengine")
 	createCmd.Flags().StringP("gitrevision","v","", "The git revision of the appengine")
 	createCmd.Flags().StringP("template","t","", "The template of the appengine")
