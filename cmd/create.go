@@ -63,7 +63,7 @@ var createCmd = &cobra.Command{
 		app := &knapv1.Appengine{
 			ObjectMeta: metav1.ObjectMeta{
 				Name:      args[0] + "-appengine",
-				Namespace: cmd.Flag("space").Value.String(),
+				Namespace: "default",
 			},
 			Spec:
 			knapv1.AppengineSpec{
